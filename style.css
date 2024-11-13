@@ -1,0 +1,950 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+html {
+  color: rgb(205, 201, 201);
+  font-family: kanit;
+}
+body {
+  overflow-x: hidden;
+  background: rgba(227, 226, 226, 0.709);
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+.menu {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  font-size: 15px;
+  top: 0;
+  right: -200px;
+  position: fixed;
+  background: #000000;
+  width: 100%;
+  height: 300px;
+  max-width: 200px;
+}
+.active {
+  right: 0;
+}
+
+.toogle_btn {
+  cursor: pointer;
+  color: var(--color);
+  display: none;
+}
+.dropdown_menu .btn {
+  width: 234px;
+}
+.dropdown_menu {
+  z-index: 1;
+  height: 0;
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  width: 260px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open {
+  width: 260px;
+  height: 220px;
+}
+.dropdown_menu div {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.first_icon_menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+.header {
+  max-width: 1075px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 185px;
+  background-image: url(./img/background.png);
+  height: 875px;
+}
+.navbar {
+  padding: 40px 0;
+  gap: 212px;
+  display: flex;
+}
+.pages {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}
+.travello {
+  margin: 0;
+  transition: all 0.3s;
+  cursor: pointer;
+  text-shadow: 5px 5px rgb(116, 114, 114);
+  font-weight: 300;
+  font-size: 50px;
+}
+.travello:hover {
+  color: white;
+}
+.home,
+.offers,
+.ebook,
+.deetinations,
+.blog,
+.testemonial,
+.contact {
+  transition: all 0.4s;
+  cursor: pointer;
+  padding: 0;
+  text-shadow: 2px 2px rgb(116, 114, 114);
+  font-size: 20px;
+}
+.home:hover,
+.offers:hover,
+.ebook:hover,
+.deetinations:hover,
+.blog:hover,
+.testemonial:hover,
+.contact:hover {
+  color: White;
+}
+.explore {
+  text-shadow: 6px 6px #0000007f;
+  font-family: Lobster;
+  margin-top: 250px;
+  /* font-weight: 200; */
+  color: White;
+  font-size: 90px;
+}
+
+/* Center qismi */
+
+.flight {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 25px;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 17px;
+  background: rgba(2, 122, 197, 0.844);
+}
+.center_advertising {
+  padding: 20px;
+  border-radius: 20px;
+  transform: translateY(-130px);
+  /* display: flex; */
+  background: rgba(255, 255, 255, 0.709);
+  border: none;
+  box-shadow: 0 0 10px 4px;
+}
+.one_part {
+  display: flex;
+  align-items: center;
+}
+.hotel {
+  cursor: pointer;
+  gap: 10px;
+  font-size: 25px;
+  color: black;
+  padding: 5px 20px;
+  border-radius: 17px;
+  /* background: rgba(2, 122, 197, 0.844); */
+}
+.living,
+.leave,
+.return,
+.going {
+  text-align: center;
+  color: rgba(81, 79, 79, 0.733);
+}
+.dubai_wrt,
+.istanbul_wrt,
+.calendar_wrt_1,
+.calendar_wrt_2 {
+  color: black;
+  font-size: 25px;
+}
+.two_part {
+  margin-top: 20px;
+  display: flex;
+  gap: 2rem;
+}
+.one_party,
+.two_party {
+  box-shadow: 0 0 20px 1px;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background: rgba(255, 255, 255, 0.771);
+  border-radius: 16px;
+}
+/* ************** center2 ************* */
+.center2_box {
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* gap: 2rem; */
+}
+.upcoming_wrt {
+  color: #000;
+  text-align: center;
+  font-weight: 500;
+  font-size: 40px;
+}
+.card {
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 0 0 10px 10px rgb(215, 215, 215);
+}
+.card:hover {
+  transform: translateY(-3px);
+}
+.miami_wrt,
+.japan_wrt,
+.dubai_wrt2,
+.tajmahal_wrt,
+.new_york_wrt,
+.greece_wrt {
+  color: #000;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.double_wrt {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  color: #000000b9;
+  font-size: 20px;
+}
+.triple_wrt {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.btn button,
+.btn22 button,
+.btn33 button,
+.btn44 button,
+.btn55 button,
+.btn66 button {
+  transition: all 0.4s;
+  cursor: pointer;
+  border-radius: 14px;
+  border: none;
+  padding: 7px 20px;
+  color: white;
+  font-family: kanit;
+  font-weight: 500;
+  box-shadow: none;
+  background: rgba(2, 122, 197, 0.724);
+}
+.btn button:hover,
+.btn22 button:hover,
+.btn33 button:hover,
+.btn44 button:hover,
+.btn55 button:hover,
+.btn66 button:hover {
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.223);
+  background: rgba(2, 122, 197, 0.844);
+}
+.coin {
+  display: flex;
+}
+/* ********* center3 ******* */
+.center3 {
+  margin-top: 100px;
+  gap: 50px;
+  display: flex;
+  align-items: center;
+  background: #f4f2ee;
+}
+.discover {
+  font-size: 40px;
+  font-weight: 500;
+  color: rgb(2, 122, 197);
+}
+.would {
+  margin-top: 20px;
+  font-size: 20px;
+  color: black;
+  max-width: 500px;
+}
+.double_btn button {
+  margin-top: 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-radius: 15px;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-family: kanit;
+  font-size: 17px;
+  background: rgba(2, 148, 197, 0.844);
+}
+.double_btn button:hover {
+  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.223);
+  background: rgba(2, 122, 197, 0.844);
+}
+/* ************ center4 *********** */
+.center4 {
+  margin-top: 100px;
+  display: flex;
+}
+.destinations {
+  font-size: 45px;
+  font-weight: 500;
+  max-width: 400px;
+  color: black;
+}
+.choose {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 330px;
+  font-weight: 300;
+  color: rgb(83, 81, 81);
+  font-size: 23px;
+}
+.next {
+  display: flex;
+  justify-content: end;
+  margin-right: 30px;
+  gap: 10px;
+}
+.left_part {
+}
+.left img,
+.right img {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.left img:hover {
+  transform: translateX(-3px);
+}
+.right img:hover {
+  transform: translateX(3px);
+}
+.right_part {
+  display: flex;
+  gap: 20px;
+}
+.right_part img {
+  cursor: pointer;
+}
+/* ******************** center5 ******************* */
+.center5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+.nusa,
+.indonesia_wrt {
+  font-size: 32px;
+  color: #000;
+  font-weight: 500;
+}
+.the,
+.putting {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 300;
+  color: rgb(45, 45, 45);
+}
+.double_img_part,
+.first_img_part {
+  display: flex;
+}
+.double_img_part {
+  margin-top: 50px;
+}
+.center5_first_img img,
+.center5_double_img img {
+  width: 470px;
+}
+.box,
+.box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 473px;
+}
+.box {
+  margin-left: 40px;
+}
+.box2 {
+  margin-right: 40px;
+}
+.read_more {
+  transition: all 0.3s;
+  margin-top: 20px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.read_wrt {
+  font-weight: 500;
+  font-size: 40px;
+  color: #000;
+  margin-bottom: 30px;
+}
+.read_more:hover {
+  transform: translateX(3px);
+}
+/* ************** center6 ************** */
+.what {
+  font-size: 40px;
+  font-weight: 500;
+  color: #000;
+}
+/* ************* center7 footer ************* */
+.center7 {
+  margin-top: 100px;
+  width: 100%;
+}
+.footer {
+  box-sizing: cover;
+  margin: 0 auto;
+  width: 1440px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  background-image: url(img/footer.png);
+}
+.triple_btn button {
+  transition: all 0.4s;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 100px;
+  border-radius: 16px;
+  padding: 13px 50px;
+  font-family: kanit;
+  color: #fff;
+  background: rgba(0, 157, 255, 0.638);
+}
+.triple_btn button:hover {
+  background: rgb(0, 157, 255);
+  box-shadow: 0 0 10px 2px rgba(67, 66, 66, 0.531);
+}
+.all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 1440px;
+  height: 50px;
+  background: #000000cf;
+  color: #fff;
+}
+.double_footer {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+}
+.one_footer_part,
+.two_footer_part,
+.three_footer_part,
+.four_footer_part {
+  color: rgba(0, 0, 0, 0.6);
+}
+.stay,
+.travello2,
+.instagram,
+.newsletter {
+  color: #000;
+  font-size: 23px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.phone {
+  margin-top: 5px;
+}
+.follow {
+  margin-top: 20px;
+  font-weight: 500;
+  color: #000;
+  font-size: 18px;
+}
+.books_icons {
+  margin-top: 5px;
+  display: flex;
+  gap: 1rem;
+}
+.instagram_png {
+  width: 215px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+form input {
+  margin-top: 10px;
+  font-family: kanit;
+  border: 1.5px solid gray;
+  border-radius: 20px;
+  padding: 12px 30px;
+}
+form button {
+  cursor: pointer;
+  margin-top: 10px;
+  border: none;
+  font-family: kanit;
+  border-radius: 20px;
+  padding: 12px 41px;
+  color: #fff;
+  background: rgba(0, 119, 193, 0.824);
+}
+/* ***************************** Responsive ****************************** */
+@media screen and (max-width: 1390px) {
+  .header {
+    padding: 0 100px;
+  }
+  .footer {
+    background-position: center;
+    width: 1200px;
+  }
+  .all {
+    width: 1200px;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .icon_menu {
+    display: block;
+  }
+  .travello {
+    text-shadow: 2px 2px rgb(116, 114, 114);
+    font-size: 30px;
+  }
+  .explore {
+    text-shadow: 3px 3px #0000007f;
+  }
+  .center_advertising {
+    padding: 15px;
+    transform: translateY(-70px);
+  }
+  .flight,
+  .hotel {
+    font-size: 18px;
+  }
+  .dubai_wrt,
+  .istanbul_wrt,
+  .calendar_wrt_1,
+  .calendar_wrt_2 {
+    font-size: 20px;
+  }
+  .two_part {
+    margin-top: 10px;
+  }
+  .one_party,
+  .two_party {
+    padding: 12px 20px;
+  }
+  .center3 {
+    gap: 0;
+    flex-direction: column;
+  }
+  .center4 {
+    flex-direction: column;
+  }
+  .destinations {
+    max-width: 100%;
+  }
+  .choose {
+    min-width: 70%;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .left_part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .next {
+    display: none;
+  }
+  .double_book {
+    margin-bottom: 30px;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 100px; */
+  }
+  .box,
+  .box2 {
+    margin-top: 20px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .double_wrt {
+    margin-top: 10px;
+  }
+  .explore {
+    margin-top: 200px;
+    font-size: 70px;
+  }
+  .center2_box {
+    width: 740px;
+  }
+  .header {
+    height: 745px;
+    width: 100%;
+    background-position: center -130px;
+    padding: 0 10px;
+  }
+  .all {
+    width: 100%;
+  }
+  .footer {
+    background-position: center;
+    width: 100%;
+  }
+  .first_img_part {
+    flex-direction: column;
+  }
+  .icons_double_6 {
+    display: none;
+  }
+  .double_img_part {
+    margin-top: 70px;
+    flex-direction: column-reverse;
+  }
+  .double_footer {
+    width: 90%;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    margin: 20px 0;
+    gap: 0px;
+  }
+  .one_footer_part {
+    margin-right: 20px;
+  }
+  .two_footer_part {
+    margin-right: 50px;
+  }
+  .four_footer_part {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .center7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .newsletter {
+    margin-bottom: 7px;
+  }
+  form {
+    display: flex;
+    gap: 1rem;
+  }
+  form input {
+    display: flex;
+    justify-content: start;
+    /* padding: 0 10px;
+    height: 35px;
+    width: 500px; */
+    margin-top: 8px;
+  }
+  form button {
+    margin-top: 8px;
+  }
+  .instagram_png {
+    width: 170px;
+  }
+  .instagram_png img {
+    width: 50px;
+  }
+  .stay,
+  .travello2,
+  .instagram,
+  .newsletter {
+    margin-bottom: 10px;
+  }
+  .follow {
+    margin-top: 10px;
+  }
+  .center4 {
+    margin-top: 60px;
+  }
+  .center2_box {
+    width: 650px;
+  }
+  .card img {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .icon_menu {
+    display: block;
+  }
+  .pages {
+    display: none;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .icon_menu {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .navbar {
+    padding: 30px 0;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 715px) {
+  .register {
+    display: none;
+  }
+}
+@media screen and (max-width: 715px) {
+  .center_advertising {
+    transform: translateY(0);
+    margin: 30px 0;
+  }
+  .travello {
+    font-size: 20px;
+  }
+  .center2_box {
+    width: 310px;
+  }
+  .double_btn {
+    display: flex;
+    justify-content: center;
+  }
+  .center3 {
+    padding: 25px;
+  }
+  .center3 img {
+    width: 300px;
+  }
+  .read_wrt {
+    font-size: 40px;
+  }
+  .first_img_part,
+  .double_img_part {
+    align-items: center;
+  }
+  .first_img_part .island_img {
+    width: 370px;
+  }
+  .three_footer_part {
+    margin-top: 20px;
+  }
+  .four_footer_part {
+    text-align: start;
+  }
+  .nusa,
+  .indonesia_wrt {
+    font-size: 20px;
+  }
+  .read_more {
+    font-size: 15px;
+  }
+  .read_more img {
+    width: 17px;
+  }
+  .box,
+  .box2 {
+    margin-top: 10px;
+    max-width: 270px;
+  }
+  .the,
+  .putting {
+    font-size: 14px;
+  }
+  .double_img_part .indonesia_img {
+    width: 270px;
+  }
+  .center5 {
+    margin-top: 50px;
+  }
+  .discover {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+  }
+  .would {
+    text-align: center;
+    max-width: 400px;
+    font-size: 18px;
+  }
+  .destinations {
+    font-size: 30px;
+  }
+  .right_part {
+    display: flex;
+    justify-content: center;
+  }
+  .amazon_img {
+    display: none;
+  }
+  .hotel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .two_part {
+    flex-direction: column;
+  }
+  .header {
+    height: 400px;
+    background-position: center;
+  }
+  .explore {
+    font-size: 45px;
+    margin-top: 70px;
+  }
+  .center_advertising {
+    padding: 10px;
+  }
+  .one_party,
+  .two_party {
+    gap: 10px;
+  }
+  .two_part {
+    gap: 10px;
+  }
+  .center3 {
+    padding: 0px;
+  }
+  .explore {
+    font-size: 30px;
+  }
+  .center7 {
+    margin-top: 50px;
+  }
+  .footer {
+    margin: 0;
+    padding: 0;
+    /* width: 300px; */
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-image: url(img/footer_tablet.png);
+  }
+  .navbar {
+    gap: 0;
+    width: 95%;
+    padding: 20px 10px;
+  }
+  .icon_menu {
+    cursor: pointer;
+  }
+  .center3 {
+    margin-top: 50px;
+  }
+  .upcoming_wrt {
+    font-size: 30px;
+  }
+  .register {
+    text-align: center;
+    width: 300px;
+    display: block;
+    color: #000;
+    font-size: 30px;
+    font-family: kanit;
+    margin-bottom: 20px;
+  }
+  .triple_btn button {
+    margin: 0;
+  }
+  .discover {
+    text-align: center;
+    width: 260px;
+    font-size: 27px;
+  }
+  .center2_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    padding: 20px;
+  }
+  .first_img_part .island_img {
+    width: 270px;
+  }
+  .nusa {
+    font-size: 16px;
+  }
+  .the {
+    margin-top: 14px;
+    font-size: 13px;
+  }
+  .read_wrt {
+    font-size: 27px;
+    margin-bottom: 10px;
+  }
+  .destinations {
+    text-align: center;
+    font-size: 25px;
+  }
+  .choose {
+    font-size: 16px;
+  }
+  .would {
+    max-width: 270px;
+    font-size: 14px;
+  }
+  .santorini {
+    display: none;
+  }
+  .two_footer_part {
+    margin-top: 30px;
+  }
+  /* form */
+  form input {
+    padding: 12px 30px;
+  }
+  .form {
+    /* display: flex; */
+    flex-direction: column;
+  }
+  .double_footer {
+    /* width: 0%; */
+    display: flex;
+    flex-direction: column;
+  }
+}
